@@ -6,7 +6,6 @@ Proman is an easy and simple app to manage your project. We offer built in voice
 1. NodeJS version 8 or later
 2. ExpressJS
 4. VueJS
-6. BabelJS (to use ES6 modules inside NodeJS)
 
 ## Installation:
 Clone this repository first `git clone https://github.com/handikacatur/proman.git`.
