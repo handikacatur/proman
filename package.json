@@ -4,7 +4,8 @@
   "description": "Proman is an easy and simple app to manage your project. We offer built in voice conference to easily discuss with your team. Proman is built with Express, Vue, and MongoDB.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "NODE_ENV=production node server/server.js",
+    "dev": "nodemon server/server.js"
   },
   "repository": {
     "type": "git",
