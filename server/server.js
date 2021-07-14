@@ -2,11 +2,16 @@ const path = require('path');
 const express = require('express');
 const errorHandler = require('./middleware/error');
 const colors = require('colors');
+const connectDB = require('./config/db');
+const dotenv = require('dotenv').config();
 
 const app = express();
 
 // ? Use express body parser
 app.use(express.json());
+
+// ? Connect to MongoDB
+connectDB();
 
 // ? Import route files
 const projects = require('./routers/projects');
