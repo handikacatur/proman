@@ -7,13 +7,15 @@ const BoardSchema = new mongoose.Schema({
         trim: true,
         maxLength: [50, 'Name can not be more than 50 characters']
     },
-    slug: String,
     project: {
         type: mongoose.Schema.ObjectId,
         ref: 'Project',
         required: true
     },
-    createAt: Date.now
+    createAt: {
+        type: Date,
+        default: Date.now
+    }
 });
 
-module.exports = mongoose.model('Project', BoardSchema);
+module.exports = mongoose.model('Board', BoardSchema);
