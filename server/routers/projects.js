@@ -7,7 +7,13 @@ const {
     deleteProject
 } = require('../controllers/projects');
 
-const router = express.Router({mergeParams: true});
+// include other resource
+const boards = require('./boards');
+
+const router = express.Router();
+
+// Re-route to other resource
+router.use('/:slug/boards', boards);
 
 router.route('/')
     .get(getProjects)
