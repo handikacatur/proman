@@ -98,7 +98,7 @@ exports.deleteProject= asyncHandler(async (req, res, next) => {
         return next(new ErrorResponse(`Project with slug ${project} not found`, 404));
     }
 
-    project.remove();
+    await project.remove();
 
     res.status(200).json({
         success: true,
