@@ -24,7 +24,7 @@ app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 
-const server = app.listen(PORT, console.log(`Server is running on port ${PORT}`.green));
+const server = app.listen(PORT, console.log(`Server is running on port ${PORT}`.yellow));
 
 // Handle promise rejection
 process.on('unhandledRejection', (err, promise) => {
