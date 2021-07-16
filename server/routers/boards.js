@@ -7,7 +7,13 @@ const {
     deleteBoard
 } = require('../controllers/boards');
 
+// include list router
+const lists = require('./lists');
+
 const router = express.Router({mergeParams: true});
+
+// re-route to list
+router.use('/:id/lists', lists);
 
 router.route('/')
     .get(getBoards)
